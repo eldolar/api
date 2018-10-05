@@ -13,4 +13,6 @@ Run server
 
 
 [**Aditional docs**](https://gitlab.com/edudepetris/eldolar/wikis/Tutorials-&-Sources)
- 
+
+
+[**Deployed on Heroku**](https://glacial-dusk-89024.herokuapp.com/api/v1/exchanges/now)
