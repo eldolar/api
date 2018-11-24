@@ -7,7 +7,7 @@ const app = express();
 
 // set up mongoose
 const URI: string = "mongodb://127.0.0.1:27017/eldolar";
- mongoose.connect(process.env.MONGODB_URI || URI, (err: any) => {
+ mongoose.connect(process.env.MONGODB_URI || URI, { useNewUrlParser: true }, (err: any) => {
   if (err) {
     console.log(err.message)
   } else {
@@ -21,6 +21,9 @@ app.set("port", process.env.PORT || 3000);
 
 // routers
 app.use('/api/v1/exchanges', ExchangeRouter)
+
+// apidoc
+app.use(express.static('public'));
 
 // start
 app.listen(app.get("port"), () => {
