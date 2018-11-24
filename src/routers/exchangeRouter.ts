@@ -4,7 +4,25 @@ import FetchNewExchangeService from '../services/fetchNewExchangeService';
 
 const router: Router = Router();
 
-// - GET /exchanges/now # returns all exchanges
+/**
+ * @api {get} /exchanges/new Request Current exchange information
+ * @apiName GetExchange
+ * @apiGroup Exchange
+ *
+ * @apiSuccessExample {json} Success-Response:
+ *     HTTP/1.1 200 OK
+ * {
+ *   "banks":[
+ *     { 
+ *       "buy":{"$numberDecimal":"36.7"},
+ *       "sell":{"$numberDecimal":"38.5"},"
+ *       "name":"Nación"
+ *     },
+ *     ...
+ *   ]
+ * }
+ */
+
 function exchange(req: Request, res: Response) : void {
   Exchange.findOne({}).sort('-createdAt')
     .then((exchange : IExchange) => {

@@ -22,6 +22,9 @@ app.set("port", process.env.PORT || 3000);
 // routers
 app.use('/api/v1/exchanges', ExchangeRouter)
 
+// apidoc
+app.use(express.static('public'));
+
 // start
 app.listen(app.get("port"), () => {
   console.log("App is running on localhost:%d", app.get("port"));
