@@ -5,7 +5,7 @@ import FetchNewExchangeService from '../services/fetchNewExchangeService';
 const router: Router = Router();
 
 /**
- * @api {get} /exchanges/new Request Current exchange information
+ * @api {get} /exchanges/now Request Current exchange information
  * @apiName GetExchange
  * @apiGroup Exchange
  *
