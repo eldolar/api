@@ -22,14 +22,13 @@ const router: Router = Router();
  *   ]
  * }
  */
-
 function exchange(req: Request, res: Response) : void {
   Exchange.findOne({}).sort('-createdAt')
     .then((exchange : IExchange) => {
       const now : Date = new Date();
       const twoHourAgo : Date = new Date(now.getTime() - (120 * 60000));
 
-      if (exchange.createdAt > twoHourAgo) {
+      if (exchange && exchange.createdAt > twoHourAgo) {
         res.send(exchange)
       } else {
         const service : FetchNewExchangeService = new FetchNewExchangeService();
