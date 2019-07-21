@@ -2,6 +2,7 @@ import * as express from "express";
 import * as bodyParse from "body-parser";
 import * as mongoose from 'mongoose';
 import ExchangeRouter from './routers/exchangeRouter'
+import * as cors from "cors"
 
 const app = express();
 
@@ -15,12 +16,12 @@ const URI: string = "mongodb://127.0.0.1:27017/eldolar";
   }
 })
 
- // config
+// config
 app.use(bodyParse.json());
 app.set("port", process.env.PORT || 3000);
 
 // routers
-app.use('/api/v1/exchanges', ExchangeRouter)
+app.use('/api/v1/exchanges', cors(), ExchangeRouter)
 
 // apidoc
 app.use(express.static('public'));
