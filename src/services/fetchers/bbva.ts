@@ -23,14 +23,14 @@ class BBVA {
       const sell : string = parseFloat(sanitizedSell).toFixed(2);
 
       return {
-        name: 'BBVA-Francés',
+        name: 'BBVA',
         buy:parseFloat(buy),
         sell: parseFloat(sell)
       }
     })
     .catch(err => {
       return {
-        name: 'BBVA-Francés',
+        name: 'BBVA',
         buy: 0,
         sell: 0
       }

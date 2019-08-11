@@ -14,7 +14,7 @@ describe('fetchers/bbva', () => {
     .reply(200, page, { 'content-type': 'text/html' })
     
     const result : BankOptions = await fetcher.run()
-    expect(result.name).to.equal('BBVA-Francés')
+    expect(result.name).to.equal('BBVA')
     expect(result.buy).to.equal(26.76)
     expect(result.sell).to.equal(28.74)
   })
@@ -27,7 +27,7 @@ describe('fetchers/bbva', () => {
     .reply(404, "", { 'content-type': 'text/html' })
 
     const result : BankOptions = await fetcher.run()
-    expect(result.name).to.equal('BBVA-Francés')
+    expect(result.name).to.equal('BBVA')
     expect(result.buy).to.equal(0)
     expect(result.sell).to.equal(0)
   })

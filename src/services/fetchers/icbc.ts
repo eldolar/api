@@ -17,14 +17,14 @@ class ICBC {
       let sell = parseFloat(result['valorVenta'].replace(',', '.'));
 
       return {
-        name: 'Icbc',
+        name: 'ICBC',
         buy: buy,
         sell: sell
       }
     })
     .catch(err => {
       return {
-        name: 'Icbc',
+        name: 'ICBC',
         buy: 0,
         sell: 0
       }

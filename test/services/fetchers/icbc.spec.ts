@@ -15,7 +15,7 @@ describe('fetchers/icbc', () => {
     .reply(200, json, { 'Content-Type': 'application/json' });
     
     const result : BankOptions = await fetcher.run();
-    expect(result.name).to.equal('Icbc');
+    expect(result.name).to.equal('ICBC');
     expect(result.buy).to.equal(44.2);
     expect(result.sell).to.equal(46.6);
   })
@@ -28,7 +28,7 @@ describe('fetchers/icbc', () => {
     .reply(404, {}, { 'Content-Type': 'application/json' });
 
     const result : BankOptions = await fetcher.run();
-    expect(result.name).to.equal('Icbc');
+    expect(result.name).to.equal('ICBC');
     expect(result.buy).to.equal(0);
     expect(result.sell).to.equal(0);
   })
