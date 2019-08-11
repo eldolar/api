@@ -30,6 +30,8 @@ Generate ApiDoc
 * ```$ yarn docs```  
 Open it on `/apidoc/`
 
+Run Test
+* ```$ yarn test```
 
 [**Aditional docs**](https://gitlab.com/edudepetris/eldolar/wikis/Tutorials-&-Sources)
 
