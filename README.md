@@ -1,6 +1,6 @@
 🤷‍♂️ Disclaimer
 
-We are 👨👨 💎 on Rails developers wining to learn a little more about other techs.
+We are 👨👨 💎 on Rails developers willing to learn a little more about other techs.
 
 Just for 🕺🎉 and in our weekends 🍻. We've been learning and developing:
 
