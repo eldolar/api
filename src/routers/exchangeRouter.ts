@@ -6,6 +6,8 @@ const router: Router = Router();
 
 /**
  * @api {get} /exchanges/now Request Current exchange information
+ * @apiDescription Search the information on DB. It will update the data
+ * on DB if the last time it was updated was more than 2 hours ago.
  * @apiName GetExchange
  * @apiGroup Exchange
  *
@@ -13,7 +15,7 @@ const router: Router = Router();
  *     HTTP/1.1 200 OK
  * {
  *   "banks":[
- *     { 
+ *     {
  *       "buy":{"$numberDecimal":"36.7"},
  *       "sell":{"$numberDecimal":"38.5"},"
  *       "name":"Nación"
@@ -46,6 +48,21 @@ function exchange(req: Request, res: Response) : void {
     })
 }
 
+/**
+ * @api {get} /exchanges/force-update Update the bank information on DB.
+ * @apiDescription It updates the bank exchange information on DB.
+ * This endpoint doesn't check if the data was updated, it just forces it.
+ * Don't use this. It was created in order to update the DB when new a
+ * bank is added.
+ * @apiName ForceExchange
+ * @apiGroup Exchange
+ */
+function forceExchange(req: Request, res: Response) : void {
+  const service : FetchNewExchangeService = new FetchNewExchangeService();
+  service.run()
+  res.send(200)
+}
+
 // - GET /exchanges # returns all exchanges
 function allExchanges(req: Request, res: Response) : void {
   Exchange.find({})
@@ -71,6 +88,7 @@ function addExchange(req: Request, res: Response) : void {
 }
 
 router.get('/now', exchange);
+router.get('/force-update', forceExchange);
 router.get('/', allExchanges);
 router.post('/', addExchange);
 
