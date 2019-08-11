@@ -60,7 +60,7 @@ function exchange(req: Request, res: Response) : void {
 function forceExchange(req: Request, res: Response) : void {
   const service : FetchNewExchangeService = new FetchNewExchangeService();
   service.run()
-  res.send(200)
+  res.sendStatus(200)
 }
 
 // - GET /exchanges # returns all exchanges
