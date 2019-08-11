@@ -6,6 +6,7 @@ import Santander from './fetchers/santander'
 import BBVA from './fetchers/bbva'
 import Galicia from './fetchers/galicia'
 import Supervielle from './fetchers/supervielle'
+import ICBC from './fetchers/icbc'
 
 class FetchNewExchangeService {
 
@@ -17,7 +18,8 @@ class FetchNewExchangeService {
       new Santander().run(),
       new BBVA().run(),
       new Galicia().run(),
-      new Supervielle().run()
+      new Supervielle().run(),
+      new ICBC().run()
     ];
 
     return Promise.all(promises)
