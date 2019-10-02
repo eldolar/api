@@ -2,6 +2,7 @@ import * as express from "express";
 import * as bodyParse from "body-parser";
 import * as mongoose from 'mongoose';
 import ExchangeRouter from './routers/exchangeRouter'
+import KeepAliveRouter from './routers/keepAliveRouter'
 import * as cors from "cors"
 
 const app = express();
@@ -22,6 +23,7 @@ app.set("port", process.env.PORT || 3000);
 
 // routers
 app.use('/api/v1/exchanges', cors(), ExchangeRouter)
+app.use('/', cors(), KeepAliveRouter)
 
 // apidoc
 app.use(express.static('public'));
