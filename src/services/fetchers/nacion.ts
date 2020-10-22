@@ -21,15 +21,17 @@ class Nacion {
     
       return {
         name: 'Nación',
+        url: "https://bit.ly/2FWkJE4"
         buy: parseFloat(buy),
-        sell: parseFloat(sell)
+        sell: parseFloat(sell),
       }
     })
     .catch(err => {
       return {
         name: 'Nación',
+        url: "https://bit.ly/2FWkJE4"
         buy: 0,
-        sell: 0
+        sell: 0,
       }
     })
   }

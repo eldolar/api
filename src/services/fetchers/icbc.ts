@@ -18,6 +18,7 @@ class ICBC {
 
       return {
         name: 'ICBC',
+        url: 'https://bit.ly/31wOliU',
         buy: buy,
         sell: sell
       }
@@ -25,6 +26,7 @@ class ICBC {
     .catch(err => {
       return {
         name: 'ICBC',
+        url: 'https://bit.ly/31wOliU',
         buy: 0,
         sell: 0
       }

@@ -26,6 +26,7 @@ class Bancor {
 
       return {
         name: 'Bancor',
+        url: 'https://bit.ly/3dPuDE3',
         buy: buy,
         sell: sell
       }
@@ -33,6 +34,7 @@ class Bancor {
     .catch(err => {
       return {
         name: 'Bancor',
+        url: 'https://bit.ly/3dPuDE3',
         buy: 0,
         sell: 0
       }
