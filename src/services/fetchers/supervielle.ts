@@ -25,7 +25,7 @@ class Supervielle {
 
       return {
         name: 'Supervielle',
-        url: 'https://bit.ly/2TfvDaK',
+        url: 'https://bit.ly/31FIGH5',
         buy: parseFloat(buy),
         sell: parseFloat(sell)
       }
@@ -33,7 +33,7 @@ class Supervielle {
     .catch(err => {
       return {
         name: 'Supervielle',
-        url: 'https://bit.ly/2TfvDaK',
+        url: 'https://bit.ly/31FIGH5',
         buy: 0,
         sell: 0
       }
