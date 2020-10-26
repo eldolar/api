@@ -21,7 +21,7 @@ class Nacion {
     
       return {
         name: 'Nación',
-        url: "https://bit.ly/35yOxzf"
+        url: "https://bit.ly/35yOxzf",
         buy: parseFloat(buy),
         sell: parseFloat(sell),
       }
