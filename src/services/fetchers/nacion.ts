@@ -29,7 +29,7 @@ class Nacion {
     .catch(err => {
       return {
         name: 'Nación',
-        url: "https://bit.ly/35yOxzf"
+        url: "https://bit.ly/35yOxzf",
         buy: 0,
         sell: 0,
       }
