@@ -17,6 +17,7 @@ describe('fetchers/bbva', () => {
     expect(result.name).to.equal('BBVA')
     expect(result.buy).to.equal(26.76)
     expect(result.sell).to.equal(28.74)
+    expect(result.url).to.equal('https://bit.ly/3m5XWF4')
   })
 
   it ('returns empty values if request get 404', async () => {
@@ -30,5 +31,6 @@ describe('fetchers/bbva', () => {
     expect(result.name).to.equal('BBVA')
     expect(result.buy).to.equal(0)
     expect(result.sell).to.equal(0)
+    expect(result.url).to.equal('https://bit.ly/3m5XWF4')
   })
 })

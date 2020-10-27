@@ -17,6 +17,7 @@ describe('fetchers/santander', () => {
     expect(result.name).to.equal('Santander')
     expect(result.buy).to.equal(30.48)
     expect(result.sell).to.equal(30.53)
+    expect(result.url).to.equal('https://bit.ly/2HpmlGE')
   })
 
   it ('returns empty values if request get 404', async () => {
@@ -30,5 +31,6 @@ describe('fetchers/santander', () => {
     expect(result.name).to.equal('Santander')
     expect(result.buy).to.equal(0)
     expect(result.sell).to.equal(0)
+    expect(result.url).to.equal('https://bit.ly/2HpmlGE')
   })
 })

@@ -18,6 +18,7 @@ describe('fetchers/bancor', () => {
     expect(result.name).to.equal('Bancor');
     expect(result.buy).to.equal(44.4);
     expect(result.sell).to.equal(46.9);
+    expect(result.url).to.equal('https://bit.ly/3dPuDE3');
   })
 
   it ('returns empty values if request get 404', async () => {
@@ -31,5 +32,6 @@ describe('fetchers/bancor', () => {
     expect(result.name).to.equal('Bancor');
     expect(result.buy).to.equal(0);
     expect(result.sell).to.equal(0);
+    expect(result.url).to.equal('https://bit.ly/3dPuDE3');
   })
 })
