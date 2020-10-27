@@ -5,7 +5,8 @@ class Bancor {
   readonly url: string;
 
   constructor () {
-    this.url = "http://bit.ly/2MbulMK";
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+    this.url = 'https://bit.ly/35ENSfE';
   }
 
   run () : Promise<BankOptions> {
