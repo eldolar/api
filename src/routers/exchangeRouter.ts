@@ -17,8 +17,8 @@ const router: Router = Router();
  *   "banks":[
  *     {
  *       "buy":{"$numberDecimal":"36.7"},
- *       "sell":{"$numberDecimal":"38.5"},"
- *       "name":"Nación"
+ *       "sell":{"$numberDecimal":"38.5"},
+ *       "name":"Nación",
  *       "url":"https://bit.ly/35yOxzf"
  *     },
  *     ...
