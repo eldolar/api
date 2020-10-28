@@ -1,16 +1,18 @@
 import BankOptions from '../bankInterfaces';
 import axios from 'axios';
+import https = require('https');
 
 class Bancor {
   readonly url: string;
+  readonly agent: object;
 
   constructor () {
-    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
     this.url = 'https://bit.ly/35ENSfE';
+    this.agent = new https.Agent({ rejectUnauthorized: false });
   }
 
   run () : Promise<BankOptions> {
-    return axios.get(this.url)
+    return axios.get(this.url, { httpsAgent: this.agent })
     .then(response => {
       const result = response.data;
       let buy, sell;
