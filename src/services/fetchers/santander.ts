@@ -24,8 +24,8 @@ class Santander {
 
       return {
         name: 'Santander',
-        buy: parseFloat(buy),
-        sell: parseFloat(sell)
+        buy: parseFloat(buy) || 0,
+        sell: parseFloat(sell) || 0,
       }
     })
     .catch(err => {
