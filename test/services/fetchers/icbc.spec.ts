@@ -18,6 +18,7 @@ describe('fetchers/icbc', () => {
     expect(result.name).to.equal('ICBC');
     expect(result.buy).to.equal(44.2);
     expect(result.sell).to.equal(46.6);
+    expect(result.url).to.equal('https://bit.ly/31wOliU');
   })
 
   it ('returns empty values if request get 404', async () => {
@@ -31,5 +32,6 @@ describe('fetchers/icbc', () => {
     expect(result.name).to.equal('ICBC');
     expect(result.buy).to.equal(0);
     expect(result.sell).to.equal(0);
+    expect(result.url).to.equal('https://bit.ly/31wOliU');
   })
 })

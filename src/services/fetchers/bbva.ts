@@ -24,6 +24,7 @@ class BBVA {
 
       return {
         name: 'BBVA',
+        url: 'https://bit.ly/3m5XWF4',
         buy:parseFloat(buy),
         sell: parseFloat(sell)
       }
@@ -31,6 +32,7 @@ class BBVA {
     .catch(err => {
       return {
         name: 'BBVA',
+        url: 'https://bit.ly/3m5XWF4',
         buy: 0,
         sell: 0
       }
