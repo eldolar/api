@@ -27,6 +27,8 @@ Open it on `/apidoc/`
 Run Test
 * ```$ yarn test```
 
-[**Aditional docs**](https://gitlab.com/edudepetris/eldolar/wikis/Tutorials-&-Sources)
+Deploy
+* Db using [Atlas](https://developer.mongodb.com/how-to/use-atlas-on-heroku)
+* Hosted on [Heroku](https://glacial-dusk-89024.herokuapp.com/api/v1/exchanges/now)
 
-[**Deployed on Heroku**](https://glacial-dusk-89024.herokuapp.com/api/v1/exchanges/now)
+[**Aditional docs**](https://gitlab.com/edudepetris/eldolar/wikis/Tutorials-&-Sources)
