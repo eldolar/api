@@ -18,6 +18,7 @@ describe('fetchers/galicia', () => {
     expect(result.name).to.equal('Galicia')
     expect(result.buy).to.equal(66.7)
     expect(result.sell).to.equal(69.2)
+    expect(result.url).to.equal('https://bit.ly/3oiopB5')
   })
 
   it ('returns empty values if request get 404', async () => {
@@ -31,5 +32,6 @@ describe('fetchers/galicia', () => {
     expect(result.name).to.equal('Galicia')
     expect(result.buy).to.equal(0)
     expect(result.sell).to.equal(0)
+    expect(result.url).to.equal('https://bit.ly/3oiopB5')    
   })
 })

@@ -5,6 +5,7 @@ export interface IExchange extends Document {
   banks: [
     {
       name: string,
+      url: string,
       buy?: number,
       sell?: number
     }
@@ -16,6 +17,7 @@ export const ExchangeSchema = new Schema({
   banks: [
     {
       name: String,
+      url: String,
       buy:  { type: Decimal128, default: 0 },
       sell: { type: Decimal128, default: 0 }
     }

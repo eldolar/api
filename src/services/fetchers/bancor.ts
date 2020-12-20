@@ -1,15 +1,18 @@
 import BankOptions from '../bankInterfaces';
 import axios from 'axios';
+import https = require('https');
 
 class Bancor {
   readonly url: string;
+  readonly agent: object;
 
   constructor () {
-    this.url = "http://bit.ly/2MbulMK";
+    this.url = 'https://bit.ly/35ENSfE';
+    this.agent = new https.Agent({ rejectUnauthorized: false });
   }
 
   run () : Promise<BankOptions> {
-    return axios.get(this.url)
+    return axios.get(this.url, { httpsAgent: this.agent })
     .then(response => {
       const result = response.data;
       let buy, sell;
@@ -26,6 +29,7 @@ class Bancor {
 
       return {
         name: 'Bancor',
+        url: 'https://bit.ly/3dPuDE3',
         buy: buy,
         sell: sell
       }
@@ -33,6 +37,7 @@ class Bancor {
     .catch(err => {
       return {
         name: 'Bancor',
+        url: 'https://bit.ly/3dPuDE3',
         buy: 0,
         sell: 0
       }

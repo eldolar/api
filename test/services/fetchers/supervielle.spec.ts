@@ -17,6 +17,7 @@ describe('fetchers/Supervielle', () => {
     expect(result.name).to.equal('Supervielle')
     expect(result.buy).to.equal(37.20)
     expect(result.sell).to.equal(39.00)
+    expect(result.url).to.equal('https://bit.ly/31FIGH5')
   })
 
   it ('returns empty values if request get 404', async () => {
@@ -30,5 +31,6 @@ describe('fetchers/Supervielle', () => {
     expect(result.name).to.equal('Supervielle')
     expect(result.buy).to.equal(0)
     expect(result.sell).to.equal(0)
+    expect(result.url).to.equal('https://bit.ly/31FIGH5')
   })
 })

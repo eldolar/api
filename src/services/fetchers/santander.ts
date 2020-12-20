@@ -26,11 +26,13 @@ class Santander {
         name: 'Santander',
         buy: parseFloat(buy) || 0,
         sell: parseFloat(sell) || 0,
+        url: 'https://bit.ly/2HpmlGE'
       }
     })
     .catch(err => {
       return {
         name: 'Santander',
+        url: 'https://bit.ly/2HpmlGE',
         buy: 0,
         sell: 0
       }

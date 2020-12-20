@@ -19,6 +19,7 @@ class Galicia {
 
       return {
         name: 'Galicia',
+        url: 'https://bit.ly/3oiopB5',
         buy: buy,
         sell: sell
       }
@@ -26,6 +27,7 @@ class Galicia {
     .catch(err => {
       return {
         name: 'Galicia',
+        url: 'https://bit.ly/3oiopB5',
         buy: 0,
         sell: 0
       }

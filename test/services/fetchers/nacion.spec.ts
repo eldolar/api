@@ -17,6 +17,7 @@ describe('fetchers/nacion', () => {
     expect(result.name).to.equal('Nación')
     expect(result.buy).to.equal(46.3)
     expect(result.sell).to.equal(48.1)
+    expect(result.url).to.equal("https://bit.ly/35yOxzf")
   })
 
   it ('returns empty values if request get 404', async () => {
@@ -30,5 +31,6 @@ describe('fetchers/nacion', () => {
     expect(result.name).to.equal('Nación')
     expect(result.buy).to.equal(0)
     expect(result.sell).to.equal(0)
+    expect(result.url).to.equal("https://bit.ly/35yOxzf")
   })
 })
