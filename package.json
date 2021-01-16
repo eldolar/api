@@ -12,7 +12,7 @@
     "@types/cors": "^2.8.5",
     "@types/express": "^4.16.0",
     "apidoc": "^0.17.7",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.2",
     "concurrently": "^4.0.1",
     "cors": "^2.8.5",
