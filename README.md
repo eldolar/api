@@ -1,3 +1,5 @@
+![Test](https://github.com/eldolar/api/actions/workflows/main.yml/badge.svg)
+
 🤷‍♂️ Disclaimer
 
 :warning: Just use this cutting edge tool in this [area][1]
